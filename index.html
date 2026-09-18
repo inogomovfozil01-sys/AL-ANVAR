@@ -1,914 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ChronoLux — Eksklyuziv Shveysariya va Dunyo Qo'l Soatlari Do'koni
-    </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Anvar Umra & Ziyorat Tour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Подключение красивого шрифта для заголовков, похожего на тот, что на картинке */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        .font-serif-custom {
+            font-family: 'Playfair Display', serif;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#054434] text-white">
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌚</text></svg>"
-    />
-
-    <!-- Font Awesome 6 Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <!-- Asosiy Stillar -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- ==========================================================================
-       TOP BAR
-       ========================================================================== -->
-    <div class="top-bar">
-      <div class="container">
-        <div class="top-bar-left">
-          <div class="top-bar-item">
-            <i class="fas fa-shield-alt"></i>
-            <span>100% Original Shveysariya va Jahon Brendlari</span>
-          </div>
-          <div class="top-bar-item">
-            <i class="fas fa-shipping-fast"></i>
-            <span>O'zbekiston bo'ylab bepul va xavfsiz yetkazib berish</span>
-          </div>
+    <!-- Верхняя информационная панель (Top Bar) -->
+    <div class="bg-[#043327] py-2 px-4 text-xs flex flex-col sm:flex-row justify-between items-center text-gray-300 border-b border-[#0a5240]">
+        <div class="flex items-center gap-2 mb-2 sm:mb-0">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span>Ramazon va Mavsumiy Umra 2024: Toshkent - Jidda to'g'ridan-to'g'ri reyslariga qabul ochiq</span>
         </div>
-        <div class="top-bar-right">
-          <div class="top-bar-item">
-            <i class="fas fa-phone-alt"></i>
-            <span>+998 (71) 200-88-99</span>
-          </div>
-          <!-- Valyuta tanlagich -->
-          <div class="currency-switcher">
-            <button class="currency-btn active" id="curr-uzs">UZS</button>
-            <button class="currency-btn" id="curr-usd">USD</button>
-          </div>
+        <div class="flex items-center gap-2 text-white font-medium">
+            <svg class="w-4 h-4 text-[#f39c12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            24/7 Call-markaz: <a href="tel:+998712008899" class="hover:text-[#f39c12] transition">+998 (71) 200-88-99</a>
         </div>
-      </div>
     </div>
 
-    <!-- ==========================================================================
-       NAVBAR (Boshqaruv va Navigatsiya)
-       ========================================================================== -->
-    <header class="navbar">
-      <div class="container">
-        <!-- Logo -->
-        <a href="#" class="brand-logo">
-          <i class="fas fa-crown logo-icon"></i>
-          <span>Chrono</span>Lux
-        </a>
-
-        <!-- Havolalar -->
-        <ul class="nav-links">
-          <li><a href="#" class="nav-link active">Bosh sahifa</a></li>
-          <li><a href="#catalog" class="nav-link">Katalog</a></li>
-          <li><a href="#brands" class="nav-link">Brendlar</a></li>
-          <li><a href="#advantages" class="nav-link">Afzalliklar</a></li>
-          <li><a href="#reviews" class="nav-link">Sharhlar</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-        </ul>
-
-        <!-- Jonli Qidiruv -->
-        <div class="nav-search">
-          <i class="fas fa-search"></i>
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Soat nomi yoki brendi..."
-          />
+    <!-- Навигация (Header) -->
+    <header class="bg-white text-gray-800 py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 shadow-md">
+        <!-- Логотип -->
+        <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-[#f39c12]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            </svg>
+            <div>
+                <h1 class="text-xl font-bold text-[#054434] leading-tight tracking-wide">AL-ANVAR</h1>
+                <p class="text-[10px] text-gray-500 font-medium tracking-widest">UMRA & ZIYORAT TOUR</p>
+            </div>
         </div>
 
-        <!-- Amallar (Sevimlilar, Taqqoslash, Savat) -->
-        <div class="nav-actions">
-          <!-- Taqqoslash -->
-          <button class="action-btn" id="btn-open-compare" title="Taqqoslash">
-            <i class="fas fa-balance-scale"></i>
-            <span class="badge-count" id="compare-badge">0</span>
-          </button>
+        <!-- Меню ссылок -->
+        <nav class="hidden lg:flex gap-8 text-sm font-medium">
+            <a href="#" class="hover:text-[#054434] transition">Afzalliklar</a>
+            <a href="#" class="hover:text-[#054434] transition">Paketlar</a>
+            <a href="#" class="hover:text-[#054434] transition">Mehmonxonalar</a>
+            <a href="#" class="hover:text-[#054434] transition">Safar Bosqichlari</a>
+        </nav>
 
-          <!-- Sevimlilar -->
-          <button class="action-btn" id="btn-open-wishlist" title="Sevimlilar">
-            <i class="far fa-heart"></i>
-            <span class="badge-count" id="wishlist-badge">0</span>
-          </button>
-
-          <!-- Savatcha -->
-          <button class="action-btn" id="btn-open-cart" title="Savatcha">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="badge-count" id="cart-badge">0</span>
-          </button>
-        </div>
-      </div>
+        <!-- Кнопка действия -->
+        <button class="hidden md:block bg-[#054434] hover:bg-[#043327] text-white px-6 py-2.5 rounded text-sm font-medium transition shadow-lg">
+            Ziyoratga Yozilish
+        </button>
+        
+        <!-- Мобильное меню (Гамбургер) -->
+        <button class="lg:hidden text-[#054434]">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
     </header>
 
-    <!-- ==========================================================================
-       HERO BANNER
-       ========================================================================== -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-tag">
-            <i class="fas fa-gem"></i> Eksklyuziv To'plam 2026
-          </div>
-          <h1 class="hero-title">
-            Vaqtni qadrlovchilar uchun <span>yuksak san'at</span>
-          </h1>
-          <p class="hero-desc">
-            Shveysariya va jahonning afsonaviy brendlaridan original qo'l
-            soatlari. Har bir daqiqangizga betakror obro' va nafislik baxsh
-            eting.
-          </p>
-          <div class="hero-buttons">
-            <a href="#catalog" class="btn-primary">
-              <span>Katalogga o'tish</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-            <button class="btn-outline" onclick="openQuickView(1)">
-              <i class="fas fa-play-circle"></i> Tanlangan model
-            </button>
-          </div>
+    <!-- Главная секция (Hero Section) -->
+    <section class="min-h-[80vh] flex flex-col items-center justify-center text-center px-4 py-16 md:py-24 relative overflow-hidden">
+        
+        <!-- Фоновые узоры (опционально, для глубины) -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
 
-          <div class="hero-stats">
-            <div class="stat-item">
-              <h4>100%</h4>
-              <p>Original kafolati</p>
-            </div>
-            <div class="stat-item">
-              <h4>2 Yil</h4>
-              <p>Rasmiy servis kafolati</p>
-            </div>
-            <div class="stat-item">
-              <h4>24/7</h4>
-              <p>Shaxsiy konsyerj xizmati</p>
-            </div>
-          </div>
+        <!-- Тег/Бейдж -->
+        <div class="border border-[#f39c12] text-[#f39c12] px-5 py-1.5 rounded-full text-xs font-semibold tracking-wider mb-8 uppercase">
+            Makkah • Madinah • 14 Kunlik Safar
         </div>
 
-        <!-- Hero Visual Showcase -->
-        <div class="hero-showcase">
-          <div class="hero-circle-glow"></div>
-          <div class="hero-image-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"
-              alt="Rolex Submariner Date"
-            />
-          </div>
-          <div class="hero-floating-badge">
-            <div class="floating-icon">
-              <i class="fas fa-award"></i>
-            </div>
-            <div class="floating-text">
-              <h5>Rolex Submariner</h5>
-              <p>Yilning eng sara soati</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- Главный заголовок -->
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-custom mb-6 leading-tight max-w-4xl">
+            Muqaddas Ziyoratni <br class="hidden md:block">
+            <span class="text-[#f39c12]">Xotirjam</span> va Mukammal Ado Eting
+        </h2>
 
-    <!-- ==========================================================================
-       ADVANTAGES (Afzalliklar)
-       ========================================================================== -->
-    <section class="advantages" id="advantages">
-      <div class="container">
-        <div class="advantages-grid">
-          <div class="adv-card">
-            <div class="adv-icon"><i class="fas fa-certificate"></i></div>
-            <div class="adv-content">
-              <h4>100% Haqiqiy & Original</h4>
-              <p>Barcha xalqaro sertifikatlarga ega</p>
-            </div>
-          </div>
-          <div class="adv-card">
-            <div class="adv-icon"><i class="fas fa-shield-alt"></i></div>
-            <div class="adv-content">
-              <h4>2 Yillik Kafolat</h4>
-              <p>Rasmiy xalqaro kafolat pasporti bilan</p>
-            </div>
-          </div>
-          <div class="adv-card">
-            <div class="adv-icon"><i class="fas fa-truck-moving"></i></div>
-            <div class="adv-content">
-              <h4>Tezkor Yetkazish</h4>
-              <p>Toshkentda 2 soatda, viloyatlarga 24 soatda</p>
-            </div>
-          </div>
-          <div class="adv-card">
-            <div class="adv-icon"><i class="fas fa-hand-holding-usd"></i></div>
-            <div class="adv-content">
-              <h4>Qulay To'lov Usullari</h4>
-              <p>Click, Payme, naqd yoki bo'lib to'lash</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       KATALOG VA FILTRLAR BO'LIMI
-       ========================================================================== -->
-    <section class="catalog-section" id="catalog">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">ChronoLux Kolleksiyasi</span>
-          <h2 class="section-title">Elita Qo'l Soatlari Katalogi</h2>
-          <p class="section-desc">
-            Klassik shoh asarlardan tortib ilg'or zamonaviy smart soatlargacha
-            bo'lgan to'liq kolleksiyamiz bilan tanishing.
-          </p>
-        </div>
-
-        <!-- Kategoriya tezkor tablari -->
-        <div class="category-quick-tabs">
-          <button class="tab-btn active" data-category="all">Barchasi</button>
-          <button class="tab-btn" data-category="erkaklar">
-            Erkaklar soatlari
-          </button>
-          <button class="tab-btn" data-category="ayollar">
-            Ayollar soatlari
-          </button>
-          <button class="tab-btn" data-category="mexanik">
-            Mexanik & Skeleton
-          </button>
-          <button class="tab-btn" data-category="klassik">
-            Klassik & Premium
-          </button>
-          <button class="tab-btn" data-category="smart">Smart & Sport</button>
-        </div>
-
-        <!-- Katalog Asosiy Qismi -->
-        <div class="catalog-layout" style="margin-top: 30px">
-          <!-- Chap tomondagi filtrlar paneli -->
-          <aside class="filter-sidebar" id="filter-sidebar">
-            <div class="filter-header">
-              <h3><i class="fas fa-sliders-h"></i> Filtrlar</h3>
-              <button class="btn-reset-filters" id="btn-reset-filters">
-                Tozalash
-              </button>
-            </div>
-
-            <!-- Kategoriya filtri -->
-            <div class="filter-group">
-              <h4 class="filter-title">Kategoriya</h4>
-              <div class="filter-options">
-                <label class="filter-radio">
-                  <input type="radio" name="cat-radio" value="all" checked />
-                  <span>Barcha soatlar</span>
-                </label>
-                <label class="filter-radio">
-                  <input type="radio" name="cat-radio" value="erkaklar" />
-                  <span>Erkaklar soatlari</span>
-                </label>
-                <label class="filter-radio">
-                  <input type="radio" name="cat-radio" value="ayollar" />
-                  <span>Ayollar soatlari</span>
-                </label>
-                <label class="filter-radio">
-                  <input type="radio" name="cat-radio" value="mexanik" />
-                  <span>Mexanik & Skeleton</span>
-                </label>
-                <label class="filter-radio">
-                  <input type="radio" name="cat-radio" value="klassik" />
-                  <span>Klassik & Premium</span>
-                </label>
-                <label class="filter-radio">
-                  <input type="radio" name="cat-radio" value="smart" />
-                  <span>Smart & Sport</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Brendlar filtri -->
-            <div class="filter-group">
-              <h4 class="filter-title">Brendlar</h4>
-              <div class="filter-options">
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Rolex" />
-                  <span>Rolex</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input
-                    type="checkbox"
-                    name="brand-filter"
-                    value="Patek Philippe"
-                  />
-                  <span>Patek Philippe</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Omega" />
-                  <span>Omega</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Tissot" />
-                  <span>Tissot</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Cartier" />
-                  <span>Cartier</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Hublot" />
-                  <span>Hublot</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Apple" />
-                  <span>Apple Watch</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Casio" />
-                  <span>Casio G-Shock</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="brand-filter" value="Seiko" />
-                  <span>Seiko</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input
-                    type="checkbox"
-                    name="brand-filter"
-                    value="Tag Heuer"
-                  />
-                  <span>Tag Heuer</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input
-                    type="checkbox"
-                    name="brand-filter"
-                    value="Audemars Piguet"
-                  />
-                  <span>Audemars Piguet</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Mexanizm filtri -->
-            <div class="filter-group">
-              <h4 class="filter-title">Mexanizm turi</h4>
-              <div class="filter-options">
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="mech-filter" value="Avtomatik" />
-                  <span>Avtomatik mexanika</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="mech-filter" value="burash" />
-                  <span>Qo'lda burash (Mexanik)</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input type="checkbox" name="mech-filter" value="kvarts" />
-                  <span>Kvarts</span>
-                </label>
-                <label class="filter-checkbox">
-                  <input
-                    type="checkbox"
-                    name="mech-filter"
-                    value="mikroprotsessor"
-                  />
-                  <span>Aqlli (Smart/Elektron)</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Narx diapazoni -->
-            <div class="filter-group">
-              <h4 class="filter-title">Maksimal Narx</h4>
-              <input
-                type="range"
-                class="price-slider"
-                id="price-slider"
-                min="3000000"
-                max="500000000"
-                step="1000000"
-                value="500000000"
-              />
-              <div class="price-range-inputs">
-                <div class="price-box" id="price-max-label">
-                  500,000,000 so'm
-                </div>
-              </div>
-            </div>
-          </aside>
-
-          <!-- O'ng tomondagi mahsulotlar ro'yxati -->
-          <div class="catalog-content">
-            <!-- Boshqaruv paneli (Count, Sort, Mobile filter) -->
-            <div class="catalog-top-bar">
-              <div class="catalog-count">
-                Mavjud modellar: <span id="catalog-count-num">12</span> ta
-              </div>
-              <div class="catalog-controls">
-                <button class="btn-mobile-filter" id="btn-mobile-filter">
-                  <i class="fas fa-filter"></i> Filtrlar
-                </button>
-                <div class="sort-select-wrap">
-                  <label for="sort-select">Saralash:</label>
-                  <select id="sort-select" class="sort-select">
-                    <option value="popular">Eng ommabop</option>
-                    <option value="price-asc">Narxi: Arzondan qimmatga</option>
-                    <option value="price-desc">Narxi: Qimmatdan arzonga</option>
-                    <option value="rating">Reyting bo'yicha</option>
-                    <option value="new">Yangi modellar</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mahsulotlar kartalari paneli -->
-            <div class="products-grid" id="products-grid">
-              <!-- JavaScript orqali dinamik yuklanadi -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       BRENDLAR PARADI
-       ========================================================================== -->
-    <section class="brands-section" id="brands">
-      <div class="container">
-        <div class="brands-grid">
-          <span class="brand-item">ROLEX</span>
-          <span class="brand-item">PATEK PHILIPPE</span>
-          <span class="brand-item">OMEGA</span>
-          <span class="brand-item">AUDEMARS PIGUET</span>
-          <span class="brand-item">CARTIER</span>
-          <span class="brand-item">TISSOT</span>
-          <span class="brand-item">TAG HEUER</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       MIJOZLAR SHARHLARI
-       ========================================================================== -->
-    <section class="reviews-section" id="reviews">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Ishonch va Sifat</span>
-          <h2 class="section-title">Mijozlarimiz Fikrlari</h2>
-          <p class="section-desc">
-            Biz mijozlarimizga faqat eng yaxshi xizmat va original soatlarni
-            taqdim etishdan faxrlanamiz.
-          </p>
-        </div>
-
-        <div class="reviews-grid">
-          <div class="review-card">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">
-              "Tissot PRX soatini buyurtma qildim. 2 soatda yetkazib berishdi.
-              Qadoqlanishi, pasporti va kafolat kartasi hammasi a'lo darajada.
-              Rahmat!"
-            </p>
-            <div class="review-author">
-              <div class="author-avatar">J</div>
-              <div class="author-info">
-                <h4>Javohir Rasulov</h4>
-                <p>Toshkent shahri</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">
-              "Cartier ayollar soatini turmush o'rtog'imning tug'ilgan kuniga
-              oldim. Ko'rinishi va dizayni haqiqatan ham aristokratik darajada
-              nafis."
-            </p>
-            <div class="review-author">
-              <div class="author-avatar">S</div>
-              <div class="author-info">
-                <h4>Sardor Karimov</h4>
-                <p>Samarqand</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">
-              "Omega Speedmaster Moonwatch — bolalikdagi orzuim edi. ChronoLux
-              orqali 100% original nusxasiga ega bo'ldim. Xizmat ko'rsatish
-              darajasi juda yuqori."
-            </p>
-            <div class="review-author">
-              <div class="author-avatar">A</div>
-              <div class="author-info">
-                <h4>Azizbek Umarov</h4>
-                <p>Buxoro</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       KO'P SO'RALADIGAN SAVOLLAR (FAQ)
-       ========================================================================== -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Ma'lumotlar</span>
-          <h2 class="section-title">Ko'p Beriladigan Savollar</h2>
-          <p class="section-desc">
-            Xaridingiz bilan bog'liq eng muhim ma'lumotlar bilan tanishing.
-          </p>
-        </div>
-
-        <div class="faq-wrapper">
-          <div class="faq-item active">
-            <div class="faq-question">
-              <span>Soatlarning originalligini qanday tekshirish mumkin?</span>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              Har bir soat rasmiy xalqaro kafolat kartasi, zavod seriya raqami
-              va autentifikatsiya hujjati bilan birga topshiriladi. Siz uni
-              istalgan rasmiy Shveysariya soat ustaxonasida bemalol
-              tekshirtirishingiz mumkin.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Yetkazib berish muddati va narxi qanday?</span>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              Toshkent shahri bo'ylab maxsus inkassator xizmati orqali 2 soat
-              ichida mutlaqo bepul yetkaziladi. Boshqa viloyatlarga esa 24 soat
-              ichida xavfsiz kur'er orqali yetkaziladi.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>To'lovni qanday shakllarda amalga oshirish mumkin?</span>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              Siz buyurtma uchun Click, Payme, bank o'tkazmasi orqali yoki
-              mahsulot qo'lingizga yetib borganda tekshirib naqd pul / terminal
-              orqali to'lashingiz mumkin.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Kafolat muddati qancha va u nimani o'z ichiga oladi?</span>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              Barcha modellarga 2 yildan 5 yilgacha rasmiy xalqaro kafolat
-              beriladi. Kafolat soat mexanizmi, aniqligi va zavod detallarining
-              beg'ubor ishlashini to'liq qamrab oladi.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <a href="#" class="brand-logo" style="margin-bottom: 16px">
-              <i class="fas fa-crown logo-icon"></i>
-              <span>Chrono</span>Lux
-            </a>
-            <p>
-              ChronoLux — 2018-yildan buyon O'zbekistonda eng nufuzli
-              Shveysariya va dunyo soat brendlarining yetkazib beruvchisi. Biz
-              bilan har soniyangiz qadrli.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://t.me"
-                class="social-btn"
-                target="_blank"
-                title="Telegram"
-                ><i class="fab fa-telegram-plane"></i
-              ></a>
-              <a
-                href="https://instagram.com"
-                class="social-btn"
-                target="_blank"
-                title="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://facebook.com"
-                class="social-btn"
-                target="_blank"
-                title="Facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                href="https://youtube.com"
-                class="social-btn"
-                target="_blank"
-                title="YouTube"
-                ><i class="fab fa-youtube"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="footer-col">
-            <h4>Bo'limlar</h4>
-            <ul class="footer-links">
-              <li><a href="#catalog">Katalog</a></li>
-              <li><a href="#brands">Brendlarimiz</a></li>
-              <li><a href="#advantages">Afzalliklar</a></li>
-              <li><a href="#reviews">Mijozlar sharhlari</a></li>
-              <li><a href="#faq">Ko'p so'raladigan savollar</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Kategoriyalar</h4>
-            <ul class="footer-links">
-              <li><a href="#catalog">Erkaklar soatlari</a></li>
-              <li><a href="#catalog">Ayollar soatlari</a></li>
-              <li><a href="#catalog">Mexanik soatlar</a></li>
-              <li><a href="#catalog">Klassik modellar</a></li>
-              <li><a href="#catalog">Smart soatlar</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Aloqa & Do'konimiz</h4>
-            <div class="footer-contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Toshkent sh., Amir Temur shox ko'chasi, 107-A</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-phone-alt"></i>
-              <span>+998 (71) 200-88-99 / +998 (90) 123-45-67</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>info@chronolux.uz</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-clock"></i>
-              <span>Har kuni: 10:00 — 22:00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div>© 2026 ChronoLux. Barcha huquqlar himoyalangan.</div>
-          <div class="payment-methods">
-            <span class="pay-badge">CLICK</span>
-            <span class="pay-badge">PAYME</span>
-            <span class="pay-badge">UZCARD</span>
-            <span class="pay-badge">HUMO</span>
-            <span class="pay-badge">VISA</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- ==========================================================================
-       DRAWER: SAVATCHA (Shopping Cart)
-       ========================================================================== -->
-    <div class="drawer-overlay" id="cart-drawer-overlay">
-      <div class="drawer-panel">
-        <div class="drawer-header">
-          <h3 class="drawer-title">
-            <i class="fas fa-shopping-bag"></i> Savatcha
-            <span id="cart-drawer-count">(0)</span>
-          </h3>
-          <button class="btn-close-drawer" id="btn-close-cart">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-
-        <!-- Mahsulotlar konteyneri -->
-        <div class="drawer-body" id="cart-items-container">
-          <!-- JS orqali to'ldiriladi -->
-        </div>
-
-        <!-- Savat pastki qismi (Promokod, Summa, Buyurtma berish) -->
-        <div class="drawer-footer">
-          <form class="promo-form" id="promo-form">
-            <input
-              type="text"
-              id="promo-code-input"
-              placeholder="Promokod (masalan: LUXURY10)"
-            />
-            <button type="submit">Qo'llash</button>
-          </form>
-
-          <div class="totals-row">
-            <span>Oraliq summa:</span>
-            <span id="cart-subtotal">0 so'm</span>
-          </div>
-          <div
-            class="totals-row"
-            id="cart-discount-row"
-            style="display: none; color: #10b981"
-          >
-            <span>Chegirma:</span>
-            <span id="cart-discount">0 so'm</span>
-          </div>
-          <div class="totals-row grand-total">
-            <span>Jami:</span>
-            <span id="cart-grand-total">0 so'm</span>
-          </div>
-
-          <button class="btn-checkout" id="btn-start-checkout">
-            <i class="fas fa-check-circle"></i> Buyurtma berish
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==========================================================================
-       DRAWER: SEVIMLILAR (Wishlist)
-       ========================================================================== -->
-    <div class="drawer-overlay" id="wishlist-drawer-overlay">
-      <div class="drawer-panel">
-        <div class="drawer-header">
-          <h3 class="drawer-title">
-            <i class="far fa-heart"></i> Sevimlilar
-            <span id="wishlist-drawer-count">(0)</span>
-          </h3>
-          <button class="btn-close-drawer" id="btn-close-wishlist">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-
-        <div class="drawer-body" id="wishlist-items-container">
-          <!-- JS orqali to'ldiriladi -->
-        </div>
-      </div>
-    </div>
-
-    <!-- ==========================================================================
-       MODAL: TEZ KO'RISH (Quick View)
-       ========================================================================== -->
-    <div class="modal-overlay" id="quickview-modal">
-      <div class="modal-container">
-        <button class="btn-close-modal" onclick="closeModal('quickview-modal')">
-          <i class="fas fa-times"></i>
-        </button>
-        <div id="quickview-content">
-          <!-- JS orqali to'ldiriladi -->
-        </div>
-      </div>
-    </div>
-
-    <!-- ==========================================================================
-       MODAL: TAQQOSLASH (Compare)
-       ========================================================================== -->
-    <div class="modal-overlay" id="compare-modal">
-      <div class="modal-container compare-modal">
-        <button class="btn-close-modal" onclick="closeModal('compare-modal')">
-          <i class="fas fa-times"></i>
-        </button>
-        <h3 style="font-size: 24px; color: #fff; margin-bottom: 6px">
-          <i
-            class="fas fa-balance-scale"
-            style="color: var(--gold-primary)"
-          ></i>
-          Soatlarni Taqqoslash
-        </h3>
-        <p style="color: var(--text-secondary); font-size: 14px">
-          Tanlangan ikki modelning texnik parametrlarini solishtiring.
+        <!-- Подзаголовок -->
+        <p class="text-gray-300 max-w-2xl text-sm md:text-base mb-14 leading-relaxed">
+            Haram masjidiga 50 metr masofadagi 5 yulduzli mehmonxonalar, to'g'ridan-to'g'ri aviaparvozlar, tajribali ulamolar hamrohligi va 3 mahal milliy taomlar.
         </p>
 
-        <div id="compare-modal-content">
-          <!-- JS orqali to'ldiriladi -->
-        </div>
-      </div>
-    </div>
-
-    <!-- ==========================================================================
-       MODAL: BUYURTMA RASMIYLASHTIRISH (Checkout)
-       ========================================================================== -->
-    <div class="modal-overlay" id="checkout-modal">
-      <div class="modal-container checkout-modal">
-        <button class="btn-close-modal" onclick="closeModal('checkout-modal')">
-          <i class="fas fa-times"></i>
-        </button>
-
-        <div class="checkout-header">
-          <h3>Buyurtmani Rasmiylashtirish</h3>
-          <p style="color: var(--text-secondary); font-size: 14px">
-            Ma'lumotlaringizni kiriting, operatorimiz tez orada siz bilan
-            bog'lanadi.
-          </p>
-        </div>
-
-        <div class="order-summary-box" id="checkout-order-summary">
-          <!-- JS orqali jami summa chiqariladi -->
-        </div>
-
-        <form class="checkout-form" id="checkout-form" style="margin-top: 16px">
-          <div class="form-group">
-            <label for="order-name">Ism va familiyangiz *</label>
-            <input
-              type="text"
-              id="order-name"
-              class="form-control"
-              required
-              placeholder="Masalan: Sardor Aliyev"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="order-phone">Telefon raqamingiz *</label>
-            <input
-              type="tel"
-              id="order-phone"
-              class="form-control"
-              required
-              placeholder="+998 (90) 123-45-67"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="order-address">Yetkazib berish manzili *</label>
-            <input
-              type="text"
-              id="order-address"
-              class="form-control"
-              required
-              placeholder="Shahar, tuman, ko'cha, uy raqami"
-            />
-          </div>
-
-          <div class="form-group">
-            <label>To'lov usuli</label>
-            <div class="payment-options">
-              <label class="pay-radio-card active">
-                <input
-                  type="radio"
-                  name="payment-method"
-                  value="Click"
-                  checked
-                />
-                <span>Click</span>
-              </label>
-              <label class="pay-radio-card">
-                <input type="radio" name="payment-method" value="Payme" />
-                <span>Payme</span>
-              </label>
-              <label class="pay-radio-card">
-                <input type="radio" name="payment-method" value="Naqd" />
-                <span>Naqd / Terminal</span>
-              </label>
+        <!-- Карточки преимуществ -->
+        <div class="flex flex-col md:flex-row justify-center gap-4 mb-14 w-full max-w-5xl">
+            
+            <!-- Карточка 1 -->
+            <div class="bg-[#075a45] hover:bg-[#086b52] transition p-5 rounded-lg flex items-center gap-4 w-full md:w-1/3 text-left border border-[#0a7358]">
+                <div class="bg-[#054434] p-3 rounded text-blue-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm">To'g'ridan-to'g'ri Reys</h4>
+                    <p class="text-gray-400 text-xs mt-1">Toshkentdan 5 soatlik qulay parvoz</p>
+                </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="order-notes">Qo'shimcha istaklar (ixtiyoriy)</label>
-            <textarea
-              id="order-notes"
-              class="form-control"
-              rows="2"
-              placeholder="Masalan: Sovg'a qutisida bo'lsin"
-            ></textarea>
-          </div>
+            <!-- Карточка 2 -->
+            <div class="bg-[#075a45] hover:bg-[#086b52] transition p-5 rounded-lg flex items-center gap-4 w-full md:w-1/3 text-left border border-[#0a7358]">
+                <div class="bg-[#054434] p-3 rounded text-yellow-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm">Haramga 50 Metr</h4>
+                    <p class="text-gray-400 text-xs mt-1">Pullman Zamzam & Front Taiba</p>
+                </div>
+            </div>
 
-          <button type="submit" class="btn-checkout" style="margin-top: 10px">
-            <i class="fas fa-lock"></i> Buyurtmani Tasdiqlash
-          </button>
-        </form>
-      </div>
-    </div>
+            <!-- Карточка 3 -->
+            <div class="bg-[#075a45] hover:bg-[#086b52] transition p-5 rounded-lg flex items-center gap-4 w-full md:w-1/3 text-left border border-[#0a7358]">
+                <div class="bg-[#054434] p-3 rounded text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm">Tajribali Ellikboshi</h4>
+                    <p class="text-gray-400 text-xs mt-1">Ibodatlarni to'liq o'rgatuvchi ustozlar</p>
+                </div>
+            </div>
 
-    <!-- ==========================================================================
-       TOAST NOTIFICATIONS KONTEYNERI
-       ========================================================================== -->
-    <div id="toast-container"></div>
+        </div>
 
-    <!-- Skriptlar -->
-    <script src="js/products.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+        <!-- Кнопки действий (Call to actions) -->
+        <div class="flex flex-col sm:flex-row gap-4">
+            <button class="bg-[#f39c12] hover:bg-[#e67e22] text-white px-8 py-3.5 rounded-md font-medium transition shadow-lg shadow-orange-500/30">
+                Paketlarni Ko'rish
+            </button>
+            <button class="border border-white/50 hover:border-white hover:bg-white/10 text-white px-8 py-3.5 rounded-md font-medium transition">
+                Ziyoratga Yozilish
+            </button>
+        </div>
+
+    </section>
+
+</body>
 </html>
