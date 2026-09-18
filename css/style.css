@@ -1,0 +1,39 @@
+/* Custom styling and aesthetic touches for AL-ANVAR */
+
+@layer utilities {
+    .bg-pattern {
+        background-image: radial-gradient(#0D3E2F 0.75px, transparent 0.75px), radial-gradient(#0D3E2F 0.75px, #FAF7F2 0.75px);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+    background: #12533F;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0D3E2F;
+}
+
+/* Card hover animations */
+.pricing-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #D96B07;
+    outline-offset: 2px;
+}

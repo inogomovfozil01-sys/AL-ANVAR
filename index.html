@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-ANVAR — Muqaddas Umra va Haj Ziyorati</title>
+    <meta name="description" content="AL-ANVAR bilan muqaddas Makka va Madina ziyorati. 5 yulduzli mehmonxonalar, to'g'ridan-to'g'ri reyslar va qulay tariflar.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#08281F',
+                            deep: '#0D3E2F',
+                            emerald: '#12533F',
+                            green: '#166534',
+                            accent: '#D96B07',
+                            accentHover: '#B85603',
+                            gold: '#C59B27',
+                            goldLight: '#F5E6BE',
+                            warmBg: '#FAF7F2',
+                            warmCard: '#F5F0E6',
+                            textDark: '#122620',
+                            textMuted: '#5C6F68',
+                            borderSubtle: '#E8E1D5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        cinzel: ['"Cinzel"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#FAF7F2] text-brand-textDark font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-dark text-white/85 text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-gold text-xs"></i> +998 (71) 200-00-50</span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brand-gold text-xs"></i> Toshkent sh., Chilonzor tumani</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="hidden sm:inline text-brand-goldLight/80">✨ 2026-yilgi Umra mavsumi uchun qabul davom etmoqda</span>
+                <div class="flex items-center gap-3">
+                    <a href="https://t.me" target="_blank" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-brand-borderSubtle transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-brand-deep flex items-center justify-center text-brand-gold shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-mosque text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-cinzel font-bold tracking-wider text-brand-deep block leading-tight">AL-ANVAR</span>
+                    <span class="text-[10px] tracking-[0.2em] font-semibold text-brand-accent uppercase block">Ziyorat Turizmi</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-brand-textDark">
+                <a href="#asosiy" class="hover:text-brand-accent transition-colors">Asosiy</a>
+                <a href="#mehmonxonalar" class="hover:text-brand-accent transition-colors">Mehmonxonalar</a>
+                <a href="#tariflar" class="hover:text-brand-accent transition-colors font-semibold text-brand-deep">Tariflar</a>
+                <a href="#afzalliklar" class="hover:text-brand-accent transition-colors">Afzalliklarimiz</a>
+                <a href="#ziyoratgohlar" class="hover:text-brand-accent transition-colors">Ziyoratgohlar</a>
+                <a href="#savollar" class="hover:text-brand-accent transition-colors">FAQ</a>
+                <a href="#boglanish" class="hover:text-brand-accent transition-colors">Bog'lanish</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="#tariflar" class="inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accentHover text-white px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg transform active:scale-95">
+                    <i class="fa-solid fa-kaaba"></i> Joy Band Qilish
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" aria-label="Menyu" class="lg:hidden w-10 h-10 flex items-center justify-center text-brand-deep text-xl rounded-lg hover:bg-black/5 transition-colors">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-brand-borderSubtle px-4 pt-3 pb-6 shadow-xl transition-all duration-300">
+            <div class="flex flex-col space-y-3 font-medium text-[15px]">
+                <a href="#asosiy" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-brand-warmBg text-brand-deep">Asosiy</a>
+                <a href="#mehmonxonalar" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-brand-warmBg text-brand-deep">Mehmonxonalar</a>
+                <a href="#tariflar" class="mobile-nav-link py-2 px-3 rounded-lg bg-brand-warmCard text-brand-accent font-semibold">Tariflar</a>
+                <a href="#afzalliklar" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-brand-warmBg text-brand-deep">Afzalliklarimiz</a>
+                <a href="#ziyoratgohlar" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-brand-warmBg text-brand-deep">Ziyoratgohlar</a>
+                <a href="#savollar" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-brand-warmBg text-brand-deep">Ko'p Beriladigan Savollar</a>
+                <a href="#boglanish" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-brand-warmBg text-brand-deep">Bog'lanish</a>
+                <div class="pt-2">
+                    <a href="#tariflar" class="w-full flex items-center justify-center gap-2 bg-brand-accent text-white py-3 rounded-xl font-medium shadow-md">
+                        <i class="fa-solid fa-kaaba"></i> Joy Band Qilish
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="asosiy" class="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28">
+        <div class="absolute inset-0 opacity-5 pointer-events-none bg-pattern"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-deep/10 text-brand-deep text-xs sm:text-sm font-semibold tracking-wide border border-brand-deep/15">
+                        <i class="fa-solid fa-star text-brand-gold"></i> AL-ANVAR Sayyohlik Agentligi
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-deep leading-[1.15] tracking-tight">
+                        Muqaddas Umra Ziyoratini <span class="text-brand-accent italic">Mukammal</span> Qulaylikda Bajarig
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-brand-textMuted max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        To'g'ridan-to'g'ri reyslar, Haram masjidiga piyoda 1 daqiqalik 5★ mehmonxonalar, tajribali diniy ulamolar hamrohligi va sifatli xizmat kafolati.
+                    </p>
+
+                    <!-- Trust Stats Bar -->
+                    <div class="grid grid-cols-3 gap-4 pt-2 pb-2 max-w-lg mx-auto lg:mx-0 border-y border-brand-borderSubtle">
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl sm:text-3xl font-bold text-brand-deep">5,000+</span>
+                            <span class="text-xs text-brand-textMuted font-medium">Ziyoratchilar</span>
+                        </div>
+                        <div class="text-center lg:text-left border-x border-brand-borderSubtle px-2">
+                            <span class="block text-2xl sm:text-3xl font-bold text-brand-accent">100%</span>
+                            <span class="text-xs text-brand-textMuted font-medium">Rasmiy Viza</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl sm:text-3xl font-bold text-brand-deep">24/7</span>
+                            <span class="text-xs text-brand-textMuted font-medium">Gid va Shifokor</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#tariflar" class="inline-flex items-center justify-center gap-2 bg-brand-deep hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Tariflar Bilan Tanishish <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                        <a href="#boglanish" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-warmCard text-brand-deep border border-brand-borderSubtle px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 shadow-sm hover:shadow">
+                            <i class="fa-solid fa-comments text-brand-accent"></i> Bepul Maslahat Olish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Cards Preview -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Background glow decoration -->
+                        <div class="absolute -top-6 -left-6 w-72 h-72 bg-brand-gold/15 rounded-full filter blur-3xl"></div>
+                        <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-brand-deep/15 rounded-full filter blur-3xl"></div>
+                        
+                        <!-- Hero Card Showcase -->
+                        <div class="relative bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-brand-borderSubtle space-y-6">
+                            <div class="relative h-48 sm:h-56 rounded-2xl overflow-hidden bg-brand-deep flex items-center justify-center text-white">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-deep/70 to-transparent"></div>
+                                <div class="relative text-center p-4">
+                                    <i class="fa-solid fa-kaaba text-5xl sm:text-6xl text-brand-gold mb-3 animate-pulse"></i>
+                                    <h3 class="text-xl sm:text-2xl font-serif font-bold">AL-ANVAR ZIYORAT</h3>
+                                    <p class="text-xs sm:text-sm text-brand-goldLight mt-1 font-light">Har bir qadamingizda xotirjamlik va fayz</p>
+                                </div>
+                                <div class="absolute top-3 right-3 bg-brand-accent text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    Muborak Safar
+                                </div>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 p-3 rounded-xl bg-brand-warmBg border border-brand-borderSubtle/60">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-deep/10 flex items-center justify-center text-brand-deep font-bold">
+                                        <i class="fa-solid fa-plane-departure"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-brand-deep">To'g'ridan-to'g'ri Parvozlar</h4>
+                                        <p class="text-xs text-brand-textMuted">Toshkent — Jidda / Madina qatnovlari</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-3 p-3 rounded-xl bg-brand-warmBg border border-brand-borderSubtle/60">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-deep/10 flex items-center justify-center text-brand-deep font-bold">
+                                        <i class="fa-solid fa-hotel"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-brand-deep">5★ Lyuks Mehmonxonalar</h4>
+                                        <p class="text-xs text-brand-textMuted">Haramga 50 metr masofada joylashuv</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-3 p-3 rounded-xl bg-brand-warmBg border border-brand-borderSubtle/60">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-deep/10 flex items-center justify-center text-brand-deep font-bold">
+                                        <i class="fa-solid fa-book-quran"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-brand-deep">Diniy Ilmli Ellikboshilar</h4>
+                                        <p class="text-xs text-brand-textMuted">Har bir ibodatni sunnatga muvofiq bajarish</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: HOTELS SECTION (Exact replica of Image 2) -->
+    <section id="mehmonxonalar" class="py-16 sm:py-24 bg-[#FAF7F2] border-t border-brand-borderSubtle/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs sm:text-sm font-bold tracking-[0.2em] text-brand-deep uppercase block mb-3">
+                    HARAMAYN MEHMONXONALARI
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-serif font-bold text-brand-deep leading-tight">
+                    Ibodat Qilish Uchun Eng Qulay Joylashuv
+                </h2>
+            </div>
+
+            <!-- Hotels Cards Grid -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Hotel Card 1: Pullman Zamzam Makkah -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-brand-borderSubtle group">
+                    <!-- Top Green Banner -->
+                    <div class="bg-brand-deep text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-brand-emerald">
+                        <span class="text-xs sm:text-sm font-bold tracking-wider uppercase text-white">
+                            MAKKAH AL-MUKARRAMAH
+                        </span>
+                        <div class="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-white/95">
+                            <span>🚶</span>
+                            <span>Haramgacha 50 metr (1 daqiqa)</span>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Body -->
+                    <div class="p-6 sm:p-8 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-deep group-hover:text-brand-accent transition-colors">
+                                Pullman Zamzam Makkah 5★
+                            </h3>
+                            <div class="flex text-brand-gold text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-sm sm:text-base text-brand-textMuted leading-relaxed">
+                            To'g'ridan-to'g'ri Abraj Al Bait majmuasida joylashgan. Xonadan Kaa'baga qaragan panoramik ko'rinish va lift orqali to'g'ri masjidga tushish imkoni.
+                        </p>
+
+                        <!-- Extra Amenities Chips -->
+                        <div class="pt-2 flex flex-wrap gap-2 text-xs font-medium text-brand-deep">
+                            <span class="px-2.5 py-1 bg-brand-warmBg rounded-md border border-brand-borderSubtle">✓ Kaa'ba manzarasi</span>
+                            <span class="px-2.5 py-1 bg-brand-warmBg rounded-md border border-brand-borderSubtle">✓ Tezkor liftlar</span>
+                            <span class="px-2.5 py-1 bg-brand-warmBg rounded-md border border-brand-borderSubtle">✓ 24/7 Room Service</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Card 2: Front Taiba Hotel -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-brand-borderSubtle group">
+                    <!-- Top Green Banner -->
+                    <div class="bg-brand-deep text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-brand-emerald">
+                        <span class="text-xs sm:text-sm font-bold tracking-wider uppercase text-white">
+                            MADINAH AL-MUNAWARRAH
+                        </span>
+                        <div class="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-white/95">
+                            <span>🚶</span>
+                            <span>Masjidun Nabaviyga 30 metr</span>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Body -->
+                    <div class="p-6 sm:p-8 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-deep group-hover:text-brand-accent transition-colors">
+                                Front Taiba Hotel 5★
+                            </h3>
+                            <div class="flex text-brand-gold text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-sm sm:text-base text-brand-textMuted leading-relaxed">
+                            Payg'ambarimiz alayhissalom masjidlarining shimoliy kirish darvozasi ro'parasida. 24 soat shinam xizmat va tinch muhit.
+                        </p>
+
+                        <!-- Extra Amenities Chips -->
+                        <div class="pt-2 flex flex-wrap gap-2 text-xs font-medium text-brand-deep">
+                            <span class="px-2.5 py-1 bg-brand-warmBg rounded-md border border-brand-borderSubtle">✓ Masjid hovlisida</span>
+                            <span class="px-2.5 py-1 bg-brand-warmBg rounded-md border border-brand-borderSubtle">✓ Shinam restoran</span>
+                            <span class="px-2.5 py-1 bg-brand-warmBg rounded-md border border-brand-borderSubtle">✓ Bepul Wi-Fi</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: TARIFFS / PRICING SECTION (Exact replica of Image 1) -->
+    <section id="tariflar" class="py-16 sm:py-24 bg-[#FAF7F2] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+                <span class="text-xs sm:text-sm font-bold tracking-[0.2em] text-brand-deep uppercase block mb-3">
+                    ZIYORAT DASTURLARI
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-serif font-bold text-brand-deep leading-tight mb-4">
+                    Sizga Maqbul Bo'lgan Tarifni Tanlang
+                </h2>
+                <p class="text-sm sm:text-base text-brand-textMuted max-w-2xl mx-auto">
+                    Barcha paketlarga viza, chipta, transfer, mehmonxona, taomlar va sovg'alar to'plami kiradi
+                </p>
+            </div>
+
+            <!-- 3 Pricing Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+                
+                <!-- CARD 1: EKONOM PAKET -->
+                <div class="bg-white rounded-2xl p-7 sm:p-8 flex flex-col justify-between border border-brand-borderSubtle shadow-sm hover:shadow-xl transition-all duration-300 relative group">
+                    <div class="space-y-6">
+                        <!-- Category Tag -->
+                        <div>
+                            <span class="text-[11px] font-extrabold tracking-wider text-brand-deep uppercase">
+                                EKONOM PAKET
+                            </span>
+                            <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-deep mt-1">
+                                14 Kunlik Qulaylik
+                            </h3>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-baseline gap-1.5 pb-4 border-b border-brand-borderSubtle/60">
+                            <span class="text-3xl sm:text-4xl font-serif font-bold text-brand-deep">$1,150</span>
+                            <span class="text-xs text-brand-textMuted">/ kishiboshiga</span>
+                        </div>
+
+                        <!-- Feature List -->
+                        <ul class="space-y-3.5 text-xs sm:text-sm text-brand-textDark font-normal">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>To'g'ridan-to'g'ri aviaparvoz</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Rasmiy Umra vizasi va tibbiy sug'urta</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Makkada 4★ mehmonxona (600 metr)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Madinada 4★ mehmonxona (Masjidun Nabaviy 250m)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>2 mahal shved stoli taomlari</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>5 litr Zamzam suvi va ziyorat to'plami</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="pt-8">
+                        <button onclick="openBookingModal('Ekonom Paket — 14 Kunlik Qulaylik ($1,150)')" class="w-full py-3.5 px-6 rounded-xl border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white font-semibold text-sm transition-all duration-300 text-center block shadow-sm group-hover:border-brand-deep">
+                            Tanlash
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2: KOMFORT PLUS (Featured Center Card) -->
+                <div class="bg-white rounded-2xl p-7 sm:p-8 flex flex-col justify-between border-2 border-brand-accent shadow-xl hover:shadow-2xl transition-all duration-300 relative transform md:-translate-y-2 group">
+                    
+                    <!-- Orange Top Badge -->
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-brand-accent text-white text-[10px] sm:text-[11px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md whitespace-nowrap">
+                            ENG KO'P TANLANADIGAN
+                        </span>
+                    </div>
+
+                    <div class="space-y-6 pt-2">
+                        <!-- Category Tag -->
+                        <div>
+                            <span class="text-[11px] font-extrabold tracking-wider text-brand-accent uppercase">
+                                KOMFORT PLUS
+                            </span>
+                            <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-deep mt-1">
+                                5★ Haram Ro'parasida
+                            </h3>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-baseline gap-1.5 pb-4 border-b border-brand-borderSubtle/60">
+                            <span class="text-3xl sm:text-4xl font-serif font-bold text-brand-deep">$1,400</span>
+                            <span class="text-xs text-brand-textMuted">/ kishiboshiga</span>
+                        </div>
+
+                        <!-- Feature List -->
+                        <ul class="space-y-3.5 text-xs sm:text-sm text-brand-textDark font-normal">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Uzbekistan Airways to'g'ri reysi (Boeing 787)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Makkada 5★ Pullman Zamzam (Haramga 50 metr)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Madinada 5★ Front Taiba (Masjid hovlisida)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>3 mahal mazali milliy taomlar</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Qubo, Uhud, Badr va Xiro g'ori ziyoratlari</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>24/7 Shifokor va ellikboshi hamrohligi</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="pt-8">
+                        <button onclick="openBookingModal('Komfort Plus — 5★ Haram Ro\'parasida ($1,400)')" class="w-full py-3.5 px-6 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-white font-semibold text-sm transition-all duration-300 text-center block shadow-md hover:shadow-lg">
+                            Ushbu Tarifni Tanlash
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3: VIP LYUKS -->
+                <div class="bg-white rounded-2xl p-7 sm:p-8 flex flex-col justify-between border border-brand-borderSubtle shadow-sm hover:shadow-xl transition-all duration-300 relative group">
+                    <div class="space-y-6">
+                        <!-- Category Tag -->
+                        <div>
+                            <span class="text-[11px] font-extrabold tracking-wider text-brand-deep uppercase">
+                                VIP LYUKS
+                            </span>
+                            <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-deep mt-1">
+                                Premium Ziyorat
+                            </h3>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-baseline gap-1.5 pb-4 border-b border-brand-borderSubtle/60">
+                            <span class="text-3xl sm:text-4xl font-serif font-bold text-brand-deep">$1,850</span>
+                            <span class="text-xs text-brand-textMuted">/ kishiboshiga</span>
+                        </div>
+
+                        <!-- Feature List -->
+                        <ul class="space-y-3.5 text-xs sm:text-sm text-brand-textDark font-normal">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Swissotel Makkah (Kaa'ba ko'rinishi bilan)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Dar Al Taqwa Madinah 5★</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Alohida 2 kishilik lyuks xonalar</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>GMC Yukon avtomobilida VIP transfer</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>Shaxsiy ustoz-gid xizmati</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-deep font-bold">✓</span>
+                                <span>VIP zal va barcha xarajatlar to'liq ichida</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="pt-8">
+                        <button onclick="openBookingModal('VIP Lyuks — Premium Ziyorat ($1,850)')" class="w-full py-3.5 px-6 rounded-xl border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white font-semibold text-sm transition-all duration-300 text-center block shadow-sm group-hover:border-brand-deep">
+                            Tanlash
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Additional Note Under Pricing -->
+            <div class="mt-12 text-center text-xs sm:text-sm text-brand-textMuted max-w-xl mx-auto flex items-center justify-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-accent"></i>
+                <span>Har bir ziyoratchi rasmiy shartnoma va to'liq tibbiy sug'urta bilan ta'minlanadi.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Why Choose Us / Afzalliklarimiz -->
+    <section id="afzalliklar" class="py-16 sm:py-24 bg-white border-y border-brand-borderSubtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs sm:text-sm font-bold tracking-[0.2em] text-brand-deep uppercase block mb-3">
+                    BIZNING AFZALLIKLARIMIZ
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-deep leading-tight">
+                    Nega Aynan AL-ANVAR Ziyoratini Tanlashadi?
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Advantage 1 -->
+                <div class="p-8 rounded-2xl bg-brand-warmBg border border-brand-borderSubtle/70 hover:border-brand-accent/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-brand-deep mb-2">To'g'ridan-to'g'ri Parvozlar</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        Qo'shimcha tranzit va kutishlarsiz, qulay zamonaviy samolyotlarda to'g'ri Saudiya Arabistoniga parvoz.
+                    </p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="p-8 rounded-2xl bg-brand-warmBg border border-brand-borderSubtle/70 hover:border-brand-accent/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-person-praying"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-brand-deep mb-2">Tajribali Ellikboshilar</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        Diniy ilmlarga ega, har bir amal va duolarni batafsil o'rgatib boruvchi yetuk ustozlar hamrohligi.
+                    </p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="p-8 rounded-2xl bg-brand-warmBg border border-brand-borderSubtle/70 hover:border-brand-accent/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-brand-deep mb-2">24/7 Shifokor Nazorati</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        Safar davomida salomatligingiz doimiy nazorat ostida bo'ladi, malakali shifokorlarimiz har doim yoningizda.
+                    </p>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="p-8 rounded-2xl bg-brand-warmBg border border-brand-borderSubtle/70 hover:border-brand-accent/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-brand-deep mb-2">Milliy va Mazali Taomlar</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        O'zbek oshpazlari tomonidan tayyorlanadigan issiq, sifatli va halol milliy hamda shved stoli taomlari.
+                    </p>
+                </div>
+
+                <!-- Advantage 5 -->
+                <div class="p-8 rounded-2xl bg-brand-warmBg border border-brand-borderSubtle/70 hover:border-brand-accent/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-brand-deep mb-2">Maxsus Sovg'alar To'plami</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        Har bir ziyoratchiga sumkalar to'plami, nimcha, beyjik, qo'llanma kitobcha va 5 litr Zamzam suvi sovg'a qilinadi.
+                    </p>
+                </div>
+
+                <!-- Advantage 6 -->
+                <div class="p-8 rounded-2xl bg-brand-warmBg border border-brand-borderSubtle/70 hover:border-brand-accent/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-van-shuttle"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-brand-deep mb-2">Qulay Transfer Xizmati</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        Konditsionerli zamonaviy avtobuslar va qulay VIP transportlar orqali shahar ichi va shaharlararo qatnovlar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Ziyoratgohlar / Holy Places -->
+    <section id="ziyoratgohlar" class="py-16 sm:py-24 bg-[#FAF7F2]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs sm:text-sm font-bold tracking-[0.2em] text-brand-deep uppercase block mb-3">
+                    MUQADDAS QADAMJOLAR
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-deep leading-tight">
+                    Makka va Madina Ziyoratgohlari
+                </h2>
+                <p class="text-sm sm:text-base text-brand-textMuted mt-3">
+                    Safar davomida tarixiy va muqaddas qadamjolar bo'ylab qiziqarli ekskursiyalar tashkil etiladi
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Place 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-brand-borderSubtle shadow-sm hover:shadow-md transition-all text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-mountain"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-brand-deep mb-1">Uhud Tog'i</h3>
+                    <p class="text-xs text-brand-textMuted">Madinai Munavvaradagi tarixiy jang maydoni va shuhodolar qabri</p>
+                </div>
+
+                <!-- Place 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-brand-borderSubtle shadow-sm hover:shadow-md transition-all text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-brand-deep mb-1">Qubo Masjidi</h3>
+                    <p class="text-xs text-brand-textMuted">Islom tarixidagi birinchi qurilgan muborak masjid ziyorati</p>
+                </div>
+
+                <!-- Place 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-brand-borderSubtle shadow-sm hover:shadow-md transition-all text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-cloud-moon"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-brand-deep mb-1">Xiro G'ori</h3>
+                    <p class="text-xs text-brand-textMuted">Nur tog'ida joylashgan ilk vahiy nozil bo'lgan muqaddas makon</p>
+                </div>
+
+                <!-- Place 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-brand-borderSubtle shadow-sm hover:shadow-md transition-all text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-tents"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-brand-deep mb-1">Mino va Arofat</h3>
+                    <p class="text-xs text-brand-textMuted">Haj amallari ado etiladigan muborak vodiy va ziyorat maydonlari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: FAQ / Savollar -->
+    <section id="savollar" class="py-16 sm:py-24 bg-white border-t border-brand-borderSubtle">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs sm:text-sm font-bold tracking-[0.2em] text-brand-deep uppercase block mb-3">
+                    SAVOL-JAVOBLAR
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-deep leading-tight">
+                    Ko'p Beriladigan Savollar
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-brand-borderSubtle rounded-2xl overflow-hidden bg-brand-warmBg transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-serif font-bold text-brand-deep text-base sm:text-lg focus:outline-none">
+                        <span>Umra safariga qanday hujjatlar talab qilinadi?</span>
+                        <i class="fa-solid fa-chevron-down text-sm text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-borderSubtle/50 pt-4">
+                        Umra safariga borish uchun xorijga chiqish (qizil) pasporti (kamida 6 oy amal qilish muddati bilan) talab qilinadi. Barcha viza va sug'urta rasmiylashtirish ishlarini AL-ANVAR to'liq o'z zimmasiga oladi.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-brand-borderSubtle rounded-2xl overflow-hidden bg-brand-warmBg transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-serif font-bold text-brand-deep text-base sm:text-lg focus:outline-none">
+                        <span>Mehmonxonalar Haram masjididan qanchalik uzoqda?</span>
+                        <i class="fa-solid fa-chevron-down text-sm text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-borderSubtle/50 pt-4">
+                        Komfort va VIP tariflarimizda mehmonxonalar to'g'ridan-to'g'ri Haram maydonida yoki 50 metr masofada (Pullman Zamzam, Swissotel, Front Taiba) joylashgan. Ekonom paketda esa 250-600 metr masofada qulay joylashgan.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-brand-borderSubtle rounded-2xl overflow-hidden bg-brand-warmBg transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-serif font-bold text-brand-deep text-base sm:text-lg focus:outline-none">
+                        <span>To'lovni qanday tartibda amalga oshirish mumkin?</span>
+                        <i class="fa-solid fa-chevron-down text-sm text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-borderSubtle/50 pt-4">
+                        To'lovni naqd, bank o'tkazmasi yoki plastik karta orqali rasmiy shartnoma asosida amalga oshirishingiz mumkin. Shuningdek, bo'lib to'lash imkoniyati ham mavjud.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-brand-borderSubtle rounded-2xl overflow-hidden bg-brand-warmBg transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-serif font-bold text-brand-deep text-base sm:text-lg focus:outline-none">
+                        <span>Katta yoshli ota-onalarimiz uchun sharoitlar bormi?</span>
+                        <i class="fa-solid fa-chevron-down text-sm text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-borderSubtle/50 pt-4">
+                        Albatta! Guruhimizda doimiy shifokor va yordamchilar mavjud. Katta yoshdagi ziyoratchilar uchun nogironlar aravachasi, yaqin mehmonxona va maxsus e'tibor ta'minlanadi.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Contact / Consultation Form -->
+    <section id="boglanish" class="py-16 sm:py-24 bg-[#FAF7F2]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-deep rounded-3xl overflow-hidden shadow-2xl text-white">
+                <div class="grid lg:grid-cols-12">
+                    
+                    <!-- Left Info -->
+                    <div class="lg:col-span-5 p-8 sm:p-12 lg:p-16 flex flex-col justify-between space-y-8 bg-brand-dark/60">
+                        <div class="space-y-4">
+                            <span class="text-brand-gold text-xs font-bold tracking-widest uppercase">MUBORAK SAFARNI REJALASHTIRING</span>
+                            <h2 class="text-3xl sm:text-4xl font-serif font-bold leading-tight">Savollaringiz Bormi?</h2>
+                            <p class="text-sm text-white/80 leading-relaxed">
+                                Mutaxassislarimiz bilan bog'laning va Umra safaringiz haqida to'liq bepul ma'lumot hamda maslahat oling.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-brand-gold">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-white/60">Telefon raqam:</div>
+                                    <a href="tel:+998712000050" class="font-bold hover:text-brand-gold transition-colors">+998 (71) 200-00-50</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-brand-gold">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-white/60">Telegram:</div>
+                                    <a href="https://t.me" target="_blank" class="font-bold hover:text-brand-gold transition-colors">@alanvar_ziyorat</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-brand-gold">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-white/60">Manzil:</div>
+                                    <div class="font-bold">Toshkent shahar, Chilonzor tumani</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-white/10 text-xs text-white/60">
+                            AL-ANVAR — Muqaddas ziyoratingiz kafolati va ishonchli yo'ldoshingiz.
+                        </div>
+                    </div>
+
+                    <!-- Right Form -->
+                    <div class="lg:col-span-7 p-8 sm:p-12 lg:p-16 bg-white text-brand-textDark">
+                        <h3 class="text-2xl font-serif font-bold text-brand-deep mb-2">Ariza Qoldiring</h3>
+                        <p class="text-sm text-brand-textMuted mb-8">Ma'lumotlaringizni qoldiring, mutaxassisimiz 15 daqiqa ichida siz bilan bog'lanadi.</p>
+
+                        <form id="consultationForm" class="space-y-5" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label class="block text-xs font-bold text-brand-deep uppercase tracking-wider mb-2">Ismingiz</label>
+                                <input type="text" required placeholder="Ism familiyangizni kiriting" class="w-full px-4 py-3.5 rounded-xl border border-brand-borderSubtle focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none text-sm transition-all bg-brand-warmBg">
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-brand-deep uppercase tracking-wider mb-2">Telefon Raqamingiz</label>
+                                    <input type="tel" required placeholder="+998 90 123 45 67" class="w-full px-4 py-3.5 rounded-xl border border-brand-borderSubtle focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none text-sm transition-all bg-brand-warmBg">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-brand-deep uppercase tracking-wider mb-2">Tarifni Tanlang</label>
+                                    <select class="w-full px-4 py-3.5 rounded-xl border border-brand-borderSubtle focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none text-sm transition-all bg-brand-warmBg">
+                                        <option value="Komfort Plus ($1,400)">Komfort Plus — $1,400 (Tavsiya etiladi)</option>
+                                        <option value="Ekonom Paket ($1,150)">Ekonom Paket — $1,150</option>
+                                        <option value="VIP Lyuks ($1,850)">VIP Lyuks — $1,850</option>
+                                        <option value="Boshqa / Maslahat">Boshqa / Shaxsiy maslahat</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-brand-deep uppercase tracking-wider mb-2">Qo'shimcha Xabar (Ixtiyoriy)</label>
+                                <textarea rows="3" placeholder="Ziyoratchilar soni yoki qo'shimcha savollaringiz..." class="w-full px-4 py-3.5 rounded-xl border border-brand-borderSubtle focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none text-sm transition-all bg-brand-warmBg"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 px-6 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-white font-bold text-base transition-all duration-300 shadow-lg hover:shadow-xl">
+                                Ariza Yuborish <i class="fa-solid fa-paper-plane ml-2 text-sm"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-deep flex items-center justify-center text-brand-gold shadow-md">
+                            <i class="fa-solid fa-mosque text-lg"></i>
+                        </div>
+                        <span class="text-xl font-cinzel font-bold tracking-wider text-white">AL-ANVAR</span>
+                    </div>
+                    <p class="text-xs text-white/70 leading-relaxed">
+                        AL-ANVAR — O'zbekiston bo'ylab ishonchli va halol ziyorat xizmatlarini taqdim etuvchi yetakchi turizm kompaniyasi.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-brand-gold">Ziyorat Dasturlari</h4>
+                    <ul class="space-y-2 text-xs text-white/70">
+                        <li><a href="#tariflar" class="hover:text-white transition-colors">Ekonom Paket (14 Kunlik)</a></li>
+                        <li><a href="#tariflar" class="hover:text-white transition-colors">Komfort Plus (5★ Haram Ro'parasi)</a></li>
+                        <li><a href="#tariflar" class="hover:text-white transition-colors">VIP Lyuks Ziyorat</a></li>
+                        <li><a href="#tariflar" class="hover:text-white transition-colors">Ramazon Umra Mavsumi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-brand-gold">Tezkor Havolalar</h4>
+                    <ul class="space-y-2 text-xs text-white/70">
+                        <li><a href="#asosiy" class="hover:text-white transition-colors">Bosh Sahifa</a></li>
+                        <li><a href="#mehmonxonalar" class="hover:text-white transition-colors">Haramayn Mehmonxonalari</a></li>
+                        <li><a href="#afzalliklar" class="hover:text-white transition-colors">Afzalliklarimiz</a></li>
+                        <li><a href="#savollar" class="hover:text-white transition-colors">Ko'p Beriladigan Savollar</a></li>
+                        <li><a href="#boglanish" class="hover:text-white transition-colors">Biz Bilan Bog'lanish</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-brand-gold">Bog'lanish</h4>
+                    <ul class="space-y-2.5 text-xs text-white/70">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-phone text-brand-gold mt-0.5"></i>
+                            <span>+998 (71) 200-00-50</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-envelope text-brand-gold mt-0.5"></i>
+                            <span>info@al-anvar.uz</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-0.5"></i>
+                            <span>Toshkent sh., Chilonzor tumani</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-white/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 AL-ANVAR. Barcha huquqlar himoyalangan.</p>
+                <p>Muqaddas Umra va Haj safarlari bo'yicha rasmiy sayt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-brand-borderSubtle transform scale-95 opacity-0 transition-all duration-300" id="modalContainer">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-brand-warmBg flex items-center justify-center text-brand-deep hover:bg-brand-borderSubtle transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-bold tracking-widest text-brand-accent uppercase block mb-1">JOY BAND QILISH</span>
+                <h3 class="text-2xl font-serif font-bold text-brand-deep" id="modalTariffTitle">Tarifni Tanlash</h3>
+                <p class="text-xs text-brand-textMuted mt-1">Quyidagi maydonlarni to'ldiring, menejerimiz tez orada sizga qo'ng'iroq qiladi.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <input type="hidden" id="selectedTariffInput" value="">
+
+                <div>
+                    <label class="block text-xs font-bold text-brand-deep uppercase mb-1.5">Ism Familiyangiz</label>
+                    <input type="text" required placeholder="Masalan: Alisher Navoiy" class="w-full px-4 py-3 rounded-xl border border-brand-borderSubtle focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none text-sm bg-brand-warmBg">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-brand-deep uppercase mb-1.5">Telefon Raqamingiz</label>
+                    <input type="tel" required placeholder="+998 90 123 45 67" class="w-full px-4 py-3 rounded-xl border border-brand-borderSubtle focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none text-sm bg-brand-warmBg">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-brand-deep uppercase mb-1.5">Ziyoratchilar Soni</label>
+                    <select class="w-full px-4 py-3 rounded-xl border border-brand-borderSubtle focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none text-sm bg-brand-warmBg">
+                        <option value="1 kishi">1 kishi</option>
+                        <option value="2 kishi (Oila/Juftlik)">2 kishi (Oila/Juftlik)</option>
+                        <option value="3-5 kishi (Oila/Guruh)">3-5 kishi (Oila/Guruh)</option>
+                        <option value="5+ kishi">5+ kishi</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-white font-bold text-sm transition-all shadow-md mt-4">
+                    Band Qilishni Tasdiqlash
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-brand-deep text-white px-6 py-4 rounded-2xl shadow-2xl border border-brand-gold/30 flex items-center gap-3 transition-all duration-300">
+        <i class="fa-solid fa-circle-check text-brand-gold text-xl"></i>
+        <div>
+            <h4 class="text-sm font-bold">Arizangiz qabul qilindi!</h4>
+            <p class="text-xs text-white/80">Mutaxassisimiz tez orada siz bilan bog'lanadi.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
